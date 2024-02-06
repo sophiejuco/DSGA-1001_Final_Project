@@ -118,6 +118,7 @@ Doing this produced the following list of 10 “greatest hits” but some of the
 In order to handle duplicates, songs that shared the same track_name, artist, and album_name had any duplicates dropped as these songs would audibly be the exact same song. The first one of these duplicates were kept as they captured the highest average rating of that song. Had the song been the same artist and track but a different album, these duplicates would have also been dropped as they, again, would be the same song audibly just featured on multiple albums (i.e. if an artist’s original song is featured on a movie soundtrack). However, if the artist or track name was different, I would have considered these as different songs as they would be different versions audibly (i.e. a cover of a song by another artist or an acoustic version of an existing song).
 
 The resulting top 10 greatest hits are as follows:
+
 ![alt_text](https://github.com/sophiejuco/DSGA-1001_Final_Project/blob/main/Plots/Q9_4.png)
 
 **Question 10:**
@@ -152,7 +153,7 @@ The first step was to explore the “explicit” and “speechiness” columns t
 
 The data were randomly split into training and testing data and a logistic regression with cross validation to avoid overfitting was fit to the train data. Predictions were generated using the testing data and the beta value and AUC score were calculated. The beta value is 4.24 and the AUC score is 0.77.
 
-![alt_text](https://github.com/sophiejuco/DSGA-1001_Final_Project/blob/main/Plots/QEC_1.png):
+![alt_text](https://github.com/sophiejuco/DSGA-1001_Final_Project/blob/main/Plots/QEC_1.png)
 
 Despite the decent AUC score, we can see that speechiness is not a good predictor of explicitness since there are a large number of songs that were misclassified in the test set. Looking at the data further, it makes sense that speechiness would be a poor predictor since there are a large number of songs that have a low level of speechiness but are still explicit as is shown in the following conditioned histograms:
 ![alt_text](https://github.com/sophiejuco/DSGA-1001_Final_Project/blob/main/Plots/QEC_2.png)
